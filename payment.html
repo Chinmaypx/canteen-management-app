@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>Payment</title>
+</head>
+<body>
+    <div id="payment-section" class="payment-container">
+        <h1>Payment</h1>
+        
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select id="paymentMethod">
+            <option value="COD">Cash on Delivery</option>
+            <option value="UPI">UPI</option>
+        </select>
+
+        <div>
+            <label for="amount">Enter Amount:</label>
+            <input type="text" id="amount" placeholder="Enter amount" required>
+        </div>
+
+        <label for="upiId" id="upiLabel" class="hidden">UPI ID:</label>
+        <input type="text" id="upiId" class="hidden" placeholder="Enter your UPI ID">
+
+        <label for="upiPin" id="upiPinLabel" class="hidden">UPI PIN:</label>
+        <input type="password" id="upiPin" class="hidden" placeholder="Enter your UPI PIN">
+
+        <button id="submitPayment">Submit Payment</button>
+
+        <h2>Payment History</h2>
+        <table id="historyTable">
+            <thead>
+                <tr>
+                    <th>Payment Date</th>
+                    <th>Payment Method</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Payment history will be populated here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>

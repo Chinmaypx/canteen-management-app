@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Menu</h1>
+
+        <!-- Admin Section for Adding Items -->
+        <div id="admin-section" class="admin-container">
+            <h2>Add Meal Items (Admin Only)</h2>
+            <div class="admin-form">
+                <input type="text" id="new-item" placeholder="Item Name" required>
+                <input type="number" id="new-price" placeholder="Item Price" required min="0" step="0.01">
+                <select id="meal-type">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                </select>
+                <button id="add-item-button">Add Item</button>
+            </div>
+        </div>
+
+        <!-- Static Menu Display -->
+        <div>
+            <h2>Breakfast</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="breakfast-view-list"></tbody>
+            </table>
+
+            <h2>Lunch</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="lunch-view-list"></tbody>
+            </table>
+        </div>
+
+        <!-- Selection Section with Quantity -->
+        <div>
+            <h2>Select Your Meals</h2>
+            <h3>Breakfast</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="breakfast-select-list"></tbody>
+            </table>
+
+            <h3>Lunch</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="lunch-select-list"></tbody>
+            </table>
+        </div>
+
+        <!-- Submit Order Button -->
+        <div id="order-button-container">
+            <button id="submit-order-button">Submit Order</button>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div id="order-summary" style="display: none;">
+            <h2>Order Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="order-summary-list"></tbody>
+            </table>
+            <div id="total-price" style="font-weight: bold;"></div>
+            <!-- Pay Button -->
+            <button id="payButton">Pay</button>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>

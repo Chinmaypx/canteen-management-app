@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="summary.css">
+</head>
+<body>
+    <div class="summary-container">
+        <h1>Order Summary</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody id="order-summary">
+                <!-- Order details will be populated here -->
+            </tbody>
+        </table>
+        <div id="total-price"></div> <!-- Add total price display -->
+        <button onclick="window.location.href='menu.html'">Back to Menu</button>
+    </div>
+
+    <script>
+        // Fetch the order data from session storage
+        const orderData = JSON.parse(sessionStorage.getItem('orderData'));
+        const totalPriceDiv = document.getElementById('total-price');
+
+        let totalPrice = 0; // Initialize total price
+
+        if (orderData) {
+            const orderSummaryTable = document.getElementById('order-summary');
+            orderData.items.forEach(item => {
+                const row = `<tr>
+                    <td>${item.name}</td>
+                    <td>$${parseFloat(item.price).toFixed(2)}</td>
+                    <td>${item.quantity}</td>
+                    <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                </tr>`;
+                orderSummaryTable.innerHTML += row;
+
+                // Calculate total price
+                totalPrice += item.price * item.quantity;
+            });
+            totalPriceDiv.textContent = `Total Price: $${totalPrice.toFixed(2)}`; // Display total price
+        } else {
+            totalPriceDiv.textContent = 'Total Price: $0.00'; // Default value if no order data
+        }
+    </script>
+</body>
+</html>

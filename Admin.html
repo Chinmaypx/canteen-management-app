@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Meal</title>
+    <link rel="stylesheet" href="admin.css"> <!-- Link to the admin CSS file -->
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Add Meal Item</h2>
+        <form class="admin-form" id="admin-form">
+            <input type="text" id="meal-name" placeholder="Meal Name" required>
+            <input type="number" id="meal-price" placeholder="Price" required min="0" step="0.01">
+            <select id="meal-category">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+            </select>
+            <button type="submit">Add Item</button>
+        </form>
+        <div id="feedback" style="color: green; text-align: center;"></div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

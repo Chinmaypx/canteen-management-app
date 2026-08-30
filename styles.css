@@ -1,0 +1,95 @@
+body {
+    background-image: url('Background\ image.jpg'); /* Full background image for the home section */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Full height */
+}
+
+.home-container {
+    text-align: center; /* Center text */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    box-sizing: border-box; /* Include padding in height */
+}
+
+.login-container {
+    background: rgba(255, 245, 204, 0.9); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px; /* Maximum width */
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    text-align: center; /* Center text within the container */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+/* Reset list styles for navigation */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 10px; /* Spacing between items */
+}
+
+/* Styles for other sections */
+#menu, #order-section, #payment-section {
+    background-color: #f5f5f5; /* Solid color */
+    width: 100%; /* Full width */
+    padding: 20px;
+    margin-top: 20px; /* Space between sections */
+}

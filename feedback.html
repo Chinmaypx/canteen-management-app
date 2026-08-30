@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('Background image.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .feedback-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            width: 100%; /* Full width */
+            max-width: 500px; /* Max width to prevent it from being too large */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            margin: 0 20px; /* Margin to add spacing on the sides */
+        }
+
+        textarea {
+            width: calc(100% - 20px); /* Full width minus padding */
+            height: 150px; /* Increased height */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px; /* Padding inside the box */
+            margin-bottom: 10px; /* Space below the textarea */
+            resize: none; /* Prevent resizing */
+            border: 1px solid #ccc; /* Border for visibility */
+        }
+
+        button {
+            padding: 10px 15px; /* Button padding */
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            background-color: #ffd700; /* Gold color */
+            color: #333;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f0c040; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="feedback-container">
+    <h2>Feedback</h2>
+    <textarea placeholder="Your feedback here..."></textarea>
+    <button onclick="submitFeedback()">Submit Feedback</button>
+</div>
+
+<script>
+    function submitFeedback() {
+        const feedbackInput = document.querySelector('textarea');
+        alert('Feedback submitted: ' + feedbackInput.value);
+        feedbackInput.value = ''; // Clear the input
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="order-container">
+        <h1>Order Summary</h1>
+
+        <div id="items-list"></div> <!-- Displays the list of ordered items -->
+        <div id="total-price"></div> <!-- Displays the total price of the order -->
+
+        <form id="order-form">
+            <input type="text" id="customer-name" placeholder="Your Name" required>
+            <input type="email" id="customer-email" placeholder="Your Email" required>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+    <script src="order.js"></script> <!-- Link to the order.js file -->
+</body>
+</html>
